@@ -6,7 +6,9 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import tasks.Login;
 import tasks.OpenUp;
+import tasks.SearchP;
 
 public class ChoucairAcademyStepDefinitions {
 
@@ -19,12 +21,12 @@ public class ChoucairAcademyStepDefinitions {
 
     @Given("^than Actor_Wilson wants to learn automation at the academy Ch$")
     public void thanActor_WilsonWantsToLearnAutomationAtTheAcademyCh() {
-        OnStage.theActorCalled("Wilson").wasAbleTo(OpenUp.thePage());//, (Login.onThePage()));
+        OnStage.theActorCalled("Wilson").wasAbleTo(OpenUp.thePage(), (Login.onThePage()));
     }
 
-    @When("^he searches for the course Recursos Automatizacion Banco on the choucair academy platform$")
-    public void heSearchesForTheCourseRecursosAutomatizacionBancoOnTheChoucairAcademyPlatform()  {
-
+    @When("^he searches for the course (.*) on the choucair academy platform$")
+    public void heSearchesForTheCourseRecursosAutomatizacionBancoOnTheChoucairAcademyPlatform(String course)  {
+        OnStage.theActorInTheSpotlight().attemptsTo(SearchP.the(course));
     }
 
     @Then("^he finds the course called Recursos Automatización Bancolombia$")
