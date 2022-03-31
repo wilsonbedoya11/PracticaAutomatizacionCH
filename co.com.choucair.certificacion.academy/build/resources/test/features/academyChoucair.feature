@@ -10,6 +10,8 @@ Feature: Academy Choucair
     When he searches for the course Automatización de Pruebas on the choucair academy platform
     |course|
     |Automatización de Pruebas|
+    |Automatización de Pruebas|
     Then he finds the course called Automatización de Pruebas
       |result|
+      |Automatización de Pruebas|
       |Automatización de Pruebas|
