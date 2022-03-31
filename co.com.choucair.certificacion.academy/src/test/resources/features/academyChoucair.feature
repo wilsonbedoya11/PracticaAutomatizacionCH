@@ -8,4 +8,8 @@ Feature: Academy Choucair
   Scenario: Search for automation course
     Given than Actor_Wilson wants to learn automation at the academy Ch
     When he searches for the course Automatización de Pruebas on the choucair academy platform
+    |course|
+    |Automatización de Pruebas|
     Then he finds the course called Automatización de Pruebas
+      |result|
+      |Automatización de Pruebas|
