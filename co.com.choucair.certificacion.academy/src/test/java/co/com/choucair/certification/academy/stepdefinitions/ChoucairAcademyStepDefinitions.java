@@ -4,8 +4,10 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import questions.Answer;
 import tasks.Login;
 import tasks.OpenUp;
 import tasks.SearchP;
@@ -25,13 +27,13 @@ public class ChoucairAcademyStepDefinitions {
     }
 
     @When("^he searches for the course (.*) on the choucair academy platform$")
-    public void heSearchesForTheCourseRecursosAutomatizacionBancoOnTheChoucairAcademyPlatform(String course)  {
+    public void heSearchesForTheCourseAutomatizacióndePruebasOnTheChoucairAcademyPlatform(String course)  {
         OnStage.theActorInTheSpotlight().attemptsTo(SearchP.the(course));
     }
 
-    @Then("^he finds the course called Recursos Automatización Bancolombia$")
-    public void heFindsTheCourseCalledRecursosAutomatizaciónBancolombia()  {
-
+    @Then("^he finds the course called (.*)$")
+    public void heFindsTheCourseCalledAutomatizacióndePruebas(String question)  {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(question)));
     }
 
 }
