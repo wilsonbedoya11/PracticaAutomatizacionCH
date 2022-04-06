@@ -1,0 +1,14 @@
+
+^
+java:S3252	"<Use static access with "org.openqa.selenium.By" for "xpath".(‡´ë‡ÿÿÿÿÿ8·ãêı/
+[
+java:S3252
+"9Use static access with "org.openqa.selenium.By" for "id".(‰ñ¼åøÿÿÿÿ8ºãêı/
+^
+java:S3252"<Use static access with "org.openqa.selenium.By" for "xpath".( ôíÍÿÿÿÿÿ8¼ãêı/
+a
+java:S3252"?Use static access with "org.openqa.selenium.By" for "linkText".(Œ ÀÛÿÿÿÿÿ8¾ãêı/
+X
+java:S3252"<Use static access with "org.openqa.selenium.By" for "xpath".(òò‹U8Àãêı/
+o
+java:S1192	"MDefine a constant instead of duplicating this literal "Enter button" 5 times.(‡´ë‡ÿÿÿÿÿ8ß£éı/
